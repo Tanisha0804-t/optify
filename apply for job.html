@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job</title>
+    <link rel="stylesheet" href="applyjob.css">
+</head>
+<body>
+    <div class="application-container">
+        <h1>Apply for Your Dream Job</h1>
+        <p>Fill in the details below to submit your application.</p>
+        <form class="application-form" action="applyjob.php" method="POST" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail" placeholder="Enter your email address" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" min="18" max="65" required>
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+
+            <label for="role">Role Interested In:</label>
+            <select id="role" name="role" required>
+                <option value="">Select a role</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="manager">Manager</option>
+                <option value="analyst">Analyst</option>
+            </select>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

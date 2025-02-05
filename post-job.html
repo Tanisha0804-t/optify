@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post a Job</title>
+    <link rel="stylesheet" href="postjob.css"> 
+    <style>
+        body {
+            background-color: #151B26; /* Dark Blue background */
+            color: #fff; /* Text color */
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #242932; /* Slightly lighter shade for contrast */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Adjust width as needed */
+        }
+
+        h1 {
+            color: #4CAF50; /* Green color */
+            font-weight: bold;
+            text-align: center;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        label {
+            color: #fff;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #4CAF50; /* Green color */
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Post a Job</h1> 
+        <form action="postjob.php" method="POST">
+            <label for="job_title">Job Title:</label>
+            <input type="text" id="job_title" name="job_title" required><br><br>
+
+            <label for="company_name">Company Name:</label>
+            <input type="text" id="company_name" name="company_name" required><br><br>
+
+            <label for="job_description">Job Description:</label><br>
+            <textarea id="job_description" name="job_description" rows="5" cols="40" required></textarea><br><br>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required><br><br>
+
+            <label for="experience">Experience (Years):</label>
+            <input type="number" id="experience" name="experience" min="0" required><br><br>
+
+            <label for="salary">Salary:</label>
+            <input type="text" id="salary" name="salary" required><br><br>
+
+            <button type="submit">Post Job</button>
+        </form>
+    </div>
+</body>
+</html>

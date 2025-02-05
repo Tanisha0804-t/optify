@@ -1,0 +1,64 @@
+body {
+    font-family: sans-serif;
+    background-color: #151B26; /* Dark blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.welcome-text {
+    color: #4CAF50; /* Green color */
+    font-size: 3rem; /* Increased font size */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green glow */
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    font-size: 1.2rem; /* Increase button font size */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Blue color */
+}
+
+.btn-secondary {
+    background-color: #6474cb; /* Gray color */
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Green glow on hover */
+}
